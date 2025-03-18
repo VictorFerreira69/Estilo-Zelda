@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CharactesStatus : MonoBehaviour
+public abstract class CharactesStatus : MonoBehaviour,IDamageable
 {
 
     [SerializeField] float lifeMax;
@@ -13,7 +13,7 @@ public abstract class CharactesStatus : MonoBehaviour
     public float LifeMax { get => lifeMax; }
     public float Speed { get => speed; }
 
-    // Start is called before the first frame update
+   
     void Awake()
     {
         life = lifeMax;
@@ -21,17 +21,17 @@ public abstract class CharactesStatus : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
 
     }
-    protected abstract void Teste();//Obriga o filho implementar
+    protected abstract void Teste();
 
 
-    protected virtual void Teste2()// permite que o filho sobrescreva
+    protected virtual void Teste2()
     {
-        //Possui corpo executavel
+        
     }
 
     public void TakeDamage(float damage)
