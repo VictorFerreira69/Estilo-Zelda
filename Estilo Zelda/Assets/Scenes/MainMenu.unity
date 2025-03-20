@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 500582322}
   - component: {fileID: 500582321}
   m_Layer: 5
-  m_Name: Button (Legacy) (3)
+  m_Name: Button Sair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,6 +245,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500582319}
   m_CullTransparentMesh: 1
+--- !u!1 &798987639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 798987641}
+  - component: {fileID: 798987640}
+  m_Layer: 0
+  m_Name: MenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &798987640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798987639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcba0f93c6cad64887dfa9a9f1a3a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NomeDaFase: Game
+  "painelOp\xE7ao": {fileID: 0}
+  painelMenuPrincipal: {fileID: 0}
+  painelCredito: {fileID: 0}
+--- !u!4 &798987641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798987639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6874975, y: -0.12197524, z: -1.8008822}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &945886553
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +306,7 @@ GameObject:
   - component: {fileID: 945886556}
   - component: {fileID: 945886555}
   m_Layer: 5
-  m_Name: Button (Legacy) (2)
+  m_Name: Button Credito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -599,8 +647,8 @@ Canvas:
   m_GameObject: {fileID: 1164491529}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 958676710}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -729,7 +777,7 @@ GameObject:
   - component: {fileID: 1213810439}
   - component: {fileID: 1213810438}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: "Button Op\xE7ao"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -851,7 +899,7 @@ GameObject:
   - component: {fileID: 1254884080}
   - component: {fileID: 1254884079}
   m_Layer: 5
-  m_Name: Button (Legacy) (1)
+  m_Name: Button Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
