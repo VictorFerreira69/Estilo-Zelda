@@ -9,45 +9,71 @@ public class PlayerMove : MonoBehaviour
     float horizontal, vertical;
     PlayerStatus status;
     Animator animator;
+    SwordAttack swordAttack;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         status = GetComponent<PlayerStatus>();
         animator = GetComponent<Animator>();
+        swordAttack = GetComponent<SwordAttack>();
     }
 
     void Update()
     {
+       
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-          if(horizontal < 0 && transform.localScale.x > 0)
-          {
-                transform.localScale = new Vector2(transform.localScale.x * -1,transform.localScale.y);
-          }
-          else if(horizontal > 0 && transform.localScale.x < 0)
-          {
-              transform.localScale = new Vector2(transform.localScale.x * -1,transform.localScale.y);
-          }
+
       
+        if (horizontal < 0 && transform.localScale.x > 0)
+        {
+            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+        }
+        else if (horizontal > 0 && transform.localScale.x < 0)
+        {
+            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+        }
+
+        
         bool isWalking = horizontal != 0 || vertical != 0;
         animator.SetBool("isWalking", isWalking);
 
-      
-        if (Input.GetButtonDown("Fire1")) 
+       
+        if (Input.GetButtonDown("Fire1"))
         {
-            animator.SetTrigger("Attack");
+            animator.SetTrigger("Attack"); 
+            AttackStart(); 
         }
     }
 
     private void FixedUpdate()
     {
+      
         rb.velocity = new Vector2(horizontal, vertical) * status.Speed;
     }
 
     public void TakeHit()
     {
-        animator.SetTrigger("Hit");
+        animator.SetTrigger("Hit"); 
+    }
+
+    public void AttackStart()
+    {
+        swordAttack.OnComeçoAttack(); 
+        StartCoroutine(AttackDuration()); 
+    }
+
+    private IEnumerator AttackDuration()
+    {
+       
+        yield return new WaitForSeconds(0.5f); 
+        AttackEnd(); 
+    }
+
+    public void AttackEnd()
+    {
+        swordAttack.OnFimDoAttack(); 
     }
 
     public void Die()
