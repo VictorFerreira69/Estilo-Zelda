@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
-public class Collectable : MonoBehaviour,ICollectable
+public class Collectable : MonoBehaviour,ICollectable,IItem
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Sprite itemIcon;
+
+    public GameObject GetGameObject()
     {
-        
+        return gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
+    public Sprite GetIcon()
     {
-        
+        return itemIcon;
     }
 }

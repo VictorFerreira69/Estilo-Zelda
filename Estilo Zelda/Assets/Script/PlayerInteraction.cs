@@ -4,42 +4,57 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    private IInteractable interactable;
+    private IItem nearbyItem;
+    private Inventario inventario;
 
-    IInteractable interactable;
-    
     void Start()
     {
-
+        inventario = FindObjectOfType<Inventario>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+      
         if (Input.GetButtonDown("Fire1"))
         {
             interactable?.Interact();
+        }
+
+       
+        if (nearbyItem != null && Input.GetKeyDown(KeyCode.E))
+        {
+            inventario.AddItem(nearbyItem);
+            Destroy(nearbyItem.GetGameObject());
+            nearbyItem = null;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.TryGetComponent(out IInteractable target))
         {
             interactable = target;
         }
-        if (collision.gameObject.TryGetComponent(out ICollectable collectable))
+
+        if (collision.gameObject.TryGetComponent(out IItem item))
         {
-            Destroy(collision.gameObject);
+            nearbyItem = item;
+          
         }
-
-
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         interactable = null;
+
+        if (collision.gameObject.TryGetComponent(out IItem item))
+        {
+            if (item == nearbyItem)
+            {
+                nearbyItem = null;
+            }
+        }
     }
 }
 

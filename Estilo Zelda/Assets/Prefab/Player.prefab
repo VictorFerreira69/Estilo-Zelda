@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 1813447145}
   - component: {fileID: 1813447148}
   - component: {fileID: 409635768}
+  - component: {fileID: 106047657}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -228,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2a957a8806fb443aff1550591a6e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeMax: 4
+  lifeMax: 1
   speed: 3
 --- !u!114 &1813447148
 MonoBehaviour:
@@ -255,3 +256,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordHitbox: {fileID: 457676375}
+--- !u!114 &106047657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768189846475585558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde8644393cce3a479ab6f659c9e7b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
