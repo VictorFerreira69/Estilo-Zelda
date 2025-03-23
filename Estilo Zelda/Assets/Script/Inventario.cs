@@ -12,6 +12,7 @@ public class Inventario : MonoBehaviour
 
     private int selectedSlot = 0;
     private List<GameObject> slots = new List<GameObject>();
+    private List<IItem> items = new List<IItem>();
 
     void Start()
     {
@@ -54,18 +55,39 @@ public class Inventario : MonoBehaviour
 
     public void AddItem(IItem item)
     {
-        foreach (var slot in slots)
+        for (int i = 0; i < slots.Count; i++)
         {
-            Image slotImage = slot.GetComponent<Image>();
+            Image slotImage = slots[i].GetComponent<Image>();
             if (slotImage.sprite == null)
             {
                 slotImage.sprite = item.GetIcon();
-              
+                items.Add(item);
                 return;
             }
         }
+    }
 
-       
+    public IItem GetSelectedItem()
+    {
+        if (selectedSlot >= 0 && selectedSlot < items.Count)
+        {
+            return items[selectedSlot];
+        }
+        return null;
+    }
+
+    public void RemoveItem(IItem item)
+    {
+        for (int i = 0; i < slots.Count; i++)
+        {
+            Image slotImage = slots[i].GetComponent<Image>();
+            if (slotImage.sprite == item.GetIcon())
+            {
+                slotImage.sprite = null;
+                items.Remove(item);
+                return;
+            }
+        }
     }
 
     void UpdateSlotSelection()
