@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMove : MonoBehaviour
@@ -21,11 +22,9 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-       
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-      
         if (horizontal < 0 && transform.localScale.x > 0)
         {
             transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
@@ -35,50 +34,50 @@ public class PlayerMove : MonoBehaviour
             transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         }
 
-        
         bool isWalking = horizontal != 0 || vertical != 0;
         animator.SetBool("isWalking", isWalking);
 
-       
         if (Input.GetButtonDown("Fire1"))
         {
-            animator.SetTrigger("Attack"); 
-            AttackStart(); 
+            animator.SetTrigger("Attack");
+            AttackStart();
         }
     }
 
     private void FixedUpdate()
     {
-      
         rb.velocity = new Vector2(horizontal, vertical) * status.Speed;
     }
 
     public void TakeHit()
     {
-        animator.SetTrigger("Hit"); 
+        animator.SetTrigger("Hit");
     }
 
     public void AttackStart()
     {
-        swordAttack.OnComeçoAttack(); 
-        StartCoroutine(AttackDuration()); 
+        swordAttack.OnComeçoAttack();
+        StartCoroutine(AttackDuration());
     }
 
     private IEnumerator AttackDuration()
     {
-       
-        yield return new WaitForSeconds(0.5f); 
-        AttackEnd(); 
+        yield return new WaitForSeconds(0.5f);
+        AttackEnd();
     }
 
     public void AttackEnd()
     {
-        swordAttack.OnFimDoAttack(); 
+        swordAttack.OnFimDoAttack();
     }
 
     public void Die()
     {
         animator.SetTrigger("Death");
-        rb.velocity = Vector2.zero; 
+        rb.velocity = Vector2.zero;
+        SceneManager.LoadScene("GameOver");
+       
     }
+
+  
 }
