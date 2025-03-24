@@ -9,6 +9,7 @@ public class Inventario : MonoBehaviour
     public Transform slotParent;
     public Color selectedColor = Color.yellow;
     public Color defaultColor = Color.white;
+    public Sprite cadeadoSprite;
 
     private int selectedSlot = 0;
     private List<GameObject> slots = new List<GameObject>();
@@ -19,6 +20,8 @@ public class Inventario : MonoBehaviour
         for (int i = 0; i < totalSlots; i++)
         {
             GameObject slot = Instantiate(slotPrefab, slotParent);
+            Image slotImage = slot.GetComponent<Image>();
+            slotImage.sprite = cadeadoSprite; // Inicia com o cadeado
             slots.Add(slot);
         }
         UpdateSlotSelection();
@@ -58,9 +61,9 @@ public class Inventario : MonoBehaviour
         for (int i = 0; i < slots.Count; i++)
         {
             Image slotImage = slots[i].GetComponent<Image>();
-            if (slotImage.sprite == null)
+            if (slotImage.sprite == cadeadoSprite)
             {
-                slotImage.sprite = item.GetIcon();
+                slotImage.sprite = item.GetIcon(); // Muda do cadeado para o item
                 items.Add(item);
                 return;
             }
@@ -83,7 +86,7 @@ public class Inventario : MonoBehaviour
             Image slotImage = slots[i].GetComponent<Image>();
             if (slotImage.sprite == item.GetIcon())
             {
-                slotImage.sprite = null;
+                slotImage.sprite = cadeadoSprite; // Volta para o cadeado
                 items.Remove(item);
                 return;
             }

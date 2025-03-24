@@ -275,8 +275,8 @@ Canvas:
   m_GameObject: {fileID: 252720784}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 221205399}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -705,8 +705,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -123.30499}
-  m_SizeDelta: {x: 0, y: -246.6101}
+  m_AnchoredPosition: {x: 208, y: 126}
+  m_SizeDelta: {x: -431.58, y: -277.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584110810
 MonoBehaviour:
@@ -720,11 +720,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab92a570537af1c439b8dc18bd081439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalSlots: 4
-  slotPrefab: {fileID: 8754195803138463336, guid: 97030607c0104954b9430cb029ef99a9, type: 3}
+  totalSlots: 3
+  slotPrefab: {fileID: 4835685498338080357, guid: 97030607c0104954b9430cb029ef99a9, type: 3}
   slotParent: {fileID: 584110809}
   selectedColor: {r: 1, g: 0.07657018, b: 0.015686274, a: 1}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  cadeadoSprite: {fileID: -202726166, guid: 196a5f5228e14714c9519b49f5b59090, type: 3}
 --- !u!114 &584110811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,15 +739,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -254174662, guid: cc055787b0c7294468efce3642795000, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -776,15 +777,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
+    m_Left: 5
+    m_Right: -2147483648
+    m_Top: 6
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 0, y: 0}
+  m_CellSize: {x: 50, y: 40}
+  m_Spacing: {x: 2.3, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &1940313873
