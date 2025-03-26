@@ -46,3 +46,6 @@ public class Chest : MonoBehaviour
         spriteRenderer.sprite = openChestSprite;
     }
 }
+
+
+

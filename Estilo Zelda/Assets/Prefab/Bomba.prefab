@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3715852223587828782}
   - component: {fileID: 3715852223587828783}
-  - component: {fileID: 3715852223587828768}
   - component: {fileID: 3715852223587828769}
   - component: {fileID: 3715852223587828781}
+  - component: {fileID: 6703759237757180560}
   m_Layer: 0
   m_Name: Bomba
   m_TagString: Untagged
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -1255814457, guid: fa6b4b5cd17215441a6245f7aee54ab8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,32 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3715852223587828768
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3715852223587828771}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
 --- !u!50 &3715852223587828769
 Rigidbody2D:
   serializedVersion: 4
@@ -146,5 +120,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20980c52b832bac4e815cd633afca7b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: fd098fb4cf57bad419701c802e442b7e, type: 3}
-  explosionEffect: {fileID: 7429252561399262490, guid: 0418ee71a817eec4887ea0fac4e335b7, type: 3}
+  itemSprite: {fileID: -1255814457, guid: fa6b4b5cd17215441a6245f7aee54ab8, type: 3}
+  explosionEffect: {fileID: 3715852223587828771}
+--- !u!61 &6703759237757180560
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715852223587828771}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.85714287, y: 1.0571429}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.85714287, y: 1.0571429}
+  m_EdgeRadius: 0
