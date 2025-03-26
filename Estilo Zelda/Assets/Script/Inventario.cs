@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Inventario : MonoBehaviour
 {
-    public int totalSlots = 4;
+    public int totalSlots = 3;
     public GameObject slotPrefab;
     public Transform slotParent;
     public Color selectedColor = Color.yellow;
@@ -21,10 +21,17 @@ public class Inventario : MonoBehaviour
         {
             GameObject slot = Instantiate(slotPrefab, slotParent);
             Image slotImage = slot.GetComponent<Image>();
-            slotImage.sprite = cadeadoSprite; // Inicia com o cadeado
+            slotImage.sprite = cadeadoSprite; 
             slots.Add(slot);
         }
         UpdateSlotSelection();
+
+        // Adiciona a lâmpada ao inventário no início do jogo
+        Lampada lampada = FindObjectOfType<Lampada>();
+        if (lampada != null)
+        {
+            AddItem(lampada); // Adiciona a lâmpada no primeiro slot disponível
+        }
     }
 
     void Update()
@@ -63,7 +70,7 @@ public class Inventario : MonoBehaviour
             Image slotImage = slots[i].GetComponent<Image>();
             if (slotImage.sprite == cadeadoSprite)
             {
-                slotImage.sprite = item.GetIcon(); // Muda do cadeado para o item
+                slotImage.sprite = item.GetIcon(); 
                 items.Add(item);
                 return;
             }
@@ -86,7 +93,7 @@ public class Inventario : MonoBehaviour
             Image slotImage = slots[i].GetComponent<Image>();
             if (slotImage.sprite == item.GetIcon())
             {
-                slotImage.sprite = cadeadoSprite; // Volta para o cadeado
+                slotImage.sprite = cadeadoSprite;
                 items.Remove(item);
                 return;
             }
