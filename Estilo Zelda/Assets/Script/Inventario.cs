@@ -26,11 +26,13 @@ public class Inventario : MonoBehaviour
         }
         UpdateSlotSelection();
 
-        Lampada lampada = FindObjectOfType<Lampada>();
-        if (lampada != null && !ContainsItem(lampada))
+
+        CajadoEscudo cajadoEscudo = FindObjectOfType<CajadoEscudo>();
+        if (cajadoEscudo != null && !ContainsItem(cajadoEscudo))
         {
-            AddItem(lampada);
+            AddItem(cajadoEscudo);
         }
+
     }
 
     void Update()
