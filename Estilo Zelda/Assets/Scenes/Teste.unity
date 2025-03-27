@@ -423,23 +423,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1351000517 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 768189846475585558, guid: a72acb899ff59d142a6dd2d02ad16bb1, type: 3}
-  m_PrefabInstance: {fileID: 409635758}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1351000527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351000517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e1686a927eede24ebfbbe321c9e4827, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1940313873
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +929,10 @@ PrefabInstance:
     - target: {fileID: 8745706871089756038, guid: 0a4c266ac743c974885f388144ba6cb9, type: 3}
       propertyPath: m_Name
       value: Lampada
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745706871089756038, guid: 0a4c266ac743c974885f388144ba6cb9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a4c266ac743c974885f388144ba6cb9, type: 3}

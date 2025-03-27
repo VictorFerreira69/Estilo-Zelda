@@ -5032,7 +5032,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 106
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 43
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19432,7 +19432,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 20
-      m_TileSpriteIndex: 30
+      m_TileSpriteIndex: 42
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -32645,8 +32645,8 @@ Tilemap:
     m_Data: {fileID: 49523133, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
   - m_RefCount: 611
     m_Data: {fileID: -477404053, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1626772881, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -6458434, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
   - m_RefCount: 25
@@ -32693,8 +32693,8 @@ Tilemap:
     m_Data: {fileID: -1071424525, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 1105588968, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -978480180, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 22
     m_Data: {fileID: -1613837962, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
   - m_RefCount: 3
@@ -32717,10 +32717,10 @@ Tilemap:
     m_Data: {fileID: 1099774798, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -1806139293, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -978480180, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1626772881, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -64564844, guid: b28d503bac4ceda41834111f6be2e14c, type: 3}
   - m_RefCount: 1
@@ -33145,10 +33145,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7510130987146803864, guid: 0ab15462fe1a9fe4a85102b0658effe9, type: 3}
-      propertyPath: itemInChest
-      value: 
-      objectReference: {fileID: 3715852223587828771, guid: 6f79de2a5168ed049b8895b3119d3b9c, type: 3}
     - target: {fileID: 7510130987146803865, guid: 0ab15462fe1a9fe4a85102b0658effe9, type: 3}
       propertyPath: m_Name
       value: Bau

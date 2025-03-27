@@ -21,16 +21,15 @@ public class Inventario : MonoBehaviour
         {
             GameObject slot = Instantiate(slotPrefab, slotParent);
             Image slotImage = slot.GetComponent<Image>();
-            slotImage.sprite = cadeadoSprite; 
+            slotImage.sprite = cadeadoSprite;
             slots.Add(slot);
         }
         UpdateSlotSelection();
 
-        // Adiciona a lâmpada ao inventário no início do jogo
         Lampada lampada = FindObjectOfType<Lampada>();
-        if (lampada != null)
+        if (lampada != null && !ContainsItem(lampada))
         {
-            AddItem(lampada); // Adiciona a lâmpada no primeiro slot disponível
+            AddItem(lampada);
         }
     }
 
@@ -70,7 +69,7 @@ public class Inventario : MonoBehaviour
             Image slotImage = slots[i].GetComponent<Image>();
             if (slotImage.sprite == cadeadoSprite)
             {
-                slotImage.sprite = item.GetIcon(); 
+                slotImage.sprite = item.GetIcon();
                 items.Add(item);
                 return;
             }
@@ -110,5 +109,10 @@ public class Inventario : MonoBehaviour
                 slotImage.color = (i == selectedSlot) ? selectedColor : defaultColor;
             }
         }
+    }
+
+    public bool ContainsItem(IItem item)
+    {
+        return items.Contains(item);
     }
 }

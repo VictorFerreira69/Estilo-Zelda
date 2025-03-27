@@ -12,9 +12,9 @@ public class PlayerLamp : MonoBehaviour
         inventario = FindObjectOfType<Inventario>();
         lampada = FindObjectOfType<Lampada>();
 
-        if (inventario != null && lampada != null)
+        if (inventario != null && lampada != null && !inventario.ContainsItem(lampada))
         {
-            inventario.AddItem(lampada); 
+            inventario.AddItem(lampada);
         }
     }
 
@@ -23,7 +23,8 @@ public class PlayerLamp : MonoBehaviour
         if (inventario != null && lampada != null)
         {
             IItem selectedItem = inventario.GetSelectedItem();
-            lampada.SetLight(selectedItem == lampada);
+            bool isLampSelected = selectedItem == lampada;
+            lampada.SetLight(isLampSelected);
         }
     }
 }
