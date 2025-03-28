@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 409635768}
   - component: {fileID: 106047657}
   - component: {fileID: 25213782}
+  - component: {fileID: 808973696}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -262,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2a957a8806fb443aff1550591a6e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeMax: 20
+  lifeMax: 150
   speed: 3
 --- !u!114 &1813447148
 MonoBehaviour:
@@ -316,3 +317,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14212d03a5c3b3429a20fcf3eaaac7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &808973696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768189846475585558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc935833c5150548be42f2dda741971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  heartStages:
+  - {fileID: 1658495211, guid: e2dddbeb4ac52ea45b511a2998f03421, type: 3}
+  - {fileID: 470840137, guid: 69a655e944cefc64fae998ee6449e800, type: 3}
+  - {fileID: 323734511, guid: 66c29502eaafbbf40b8261d0e1485a83, type: 3}
+  - {fileID: -969750238, guid: 4435beded664d1c47ad082423fc04f84, type: 3}
+  - {fileID: 1824224290, guid: 61386a4ea0f946a41b728769bcd465db, type: 3}
