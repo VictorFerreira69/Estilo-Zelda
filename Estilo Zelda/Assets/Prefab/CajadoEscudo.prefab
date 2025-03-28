@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d8e2abd73c24a84b9b4f631e71bdf3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cajadoIcon: {fileID: 1626780853, guid: dd44103791b448d468a46769cbde4229, type: 3}
+  cajadoIcon: {fileID: -1428978551, guid: 8f41ae586004fd541a21a4f88efb2e43, type: 3}
   cajadoIconCooldown: {fileID: 700826903, guid: f54397923c831fc4d8713b585fae7f8e, type: 3}
   barreiraPrefab: {fileID: 3957131373407831755, guid: 225ce4c0a2541d146b4d1c11af12e006, type: 3}
   duracaoEscudo: 6
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1626780853, guid: dd44103791b448d468a46769cbde4229, type: 3}
+  m_Sprite: {fileID: -1428978551, guid: 8f41ae586004fd541a21a4f88efb2e43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
