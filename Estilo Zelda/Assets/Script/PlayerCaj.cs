@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerCaj : MonoBehaviour
 { 
- private Inventario inventario;
+    private Inventario inventario;
     private CajadoEscudo cajadoEscudo;
 
-void Start()
+    void Start()
 {
     inventario = FindObjectOfType<Inventario>();
     cajadoEscudo = FindObjectOfType<CajadoEscudo>();
@@ -23,7 +23,11 @@ void Update()
     if (inventario != null && cajadoEscudo != null)
     {
         IItem selectedItem = inventario.GetSelectedItem();
-     
+        
+        if (selectedItem == cajadoEscudo && Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(cajadoEscudo.AtivarEscudo(transform));
+        }
     }
 }
 }

@@ -15,30 +15,33 @@ public class Inventario : MonoBehaviour
     private List<GameObject> slots = new List<GameObject>();
     private List<IItem> items = new List<IItem>();
 
+    private CajadoEscudo cajadoEscudo;  
+
     void Start()
     {
+        cajadoEscudo = FindObjectOfType<CajadoEscudo>();
+
+       
         for (int i = 0; i < totalSlots; i++)
         {
             GameObject slot = Instantiate(slotPrefab, slotParent);
-            Image slotImage = slot.GetComponent<Image>();
-            slotImage.sprite = cadeadoSprite;
             slots.Add(slot);
         }
+
         UpdateSlotSelection();
 
-
-        CajadoEscudo cajadoEscudo = FindObjectOfType<CajadoEscudo>();
+       
         if (cajadoEscudo != null && !ContainsItem(cajadoEscudo))
         {
             AddItem(cajadoEscudo);
         }
-
     }
 
     void Update()
     {
         int previousSlot = selectedSlot;
 
+       
         for (int i = 0; i < totalSlots; i++)
         {
             if (Input.GetKeyDown((i + 1).ToString()))
@@ -48,16 +51,14 @@ public class Inventario : MonoBehaviour
             }
         }
 
+        
         float scroll = Input.GetAxis("Mouse ScrollWheel");
-        if (scroll > 0f)
+        if (scroll != 0f)
         {
-            selectedSlot = (selectedSlot + 1) % totalSlots;
-        }
-        else if (scroll < 0f)
-        {
-            selectedSlot = (selectedSlot - 1 + totalSlots) % totalSlots;
+            selectedSlot = (selectedSlot + (scroll > 0f ? 1 : -1) + totalSlots) % totalSlots;
         }
 
+       
         if (previousSlot != selectedSlot)
         {
             UpdateSlotSelection();
@@ -66,44 +67,55 @@ public class Inventario : MonoBehaviour
 
     public void AddItem(IItem item)
     {
-        for (int i = 0; i < slots.Count; i++)
+        if (items.Contains(item)) return;
+
+        
+        for (int i = 0; i < totalSlots; i++)
         {
-            Image slotImage = slots[i].GetComponent<Image>();
-            if (slotImage.sprite == cadeadoSprite)
+            if (slots[i].GetComponent<Image>().sprite == cadeadoSprite)
             {
-                slotImage.sprite = item.GetIcon();
+                slots[i].GetComponent<Image>().sprite = item.GetIcon();
                 items.Add(item);
-                return;
+                break;
+            }
+        }
+    }
+
+    public void AtualizarIconeCajado(Sprite novoIcone)
+    {
+       
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i] is CajadoEscudo)
+            {
+                slots[i].GetComponent<Image>().sprite = novoIcone;
+                break;
             }
         }
     }
 
     public IItem GetSelectedItem()
     {
-        if (selectedSlot >= 0 && selectedSlot < items.Count)
-        {
-            return items[selectedSlot];
-        }
-        return null;
+        return selectedSlot >= 0 && selectedSlot < items.Count ? items[selectedSlot] : null;
     }
 
     public void RemoveItem(IItem item)
     {
-        for (int i = 0; i < slots.Count; i++)
+        for (int i = 0; i < totalSlots; i++)
         {
-            Image slotImage = slots[i].GetComponent<Image>();
-            if (slotImage.sprite == item.GetIcon())
+            if (slots[i].GetComponent<Image>().sprite == item.GetIcon())
             {
-                slotImage.sprite = cadeadoSprite;
+                slots[i].GetComponent<Image>().sprite = cadeadoSprite;
                 items.Remove(item);
-                return;
+                break;
             }
         }
     }
 
     void UpdateSlotSelection()
     {
-        for (int i = 0; i < slots.Count; i++)
+        
+        for (int i = 0; i < totalSlots; i++)
         {
             Image slotImage = slots[i].GetComponent<Image>();
             if (slotImage != null)

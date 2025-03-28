@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f1bfdd0a87ed54e4d8d774933b032396
+guid: f54397923c831fc4d8713b585fae7f8e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,41 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_staff--Orange_0
+      name: image-removebg-preview 1_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 542
-        height: 197
+        x: 135
+        y: 73
+        width: 231
+        height: 354
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0b31ffecaee31d4eb44a5d9e9d44188
-      internalID: -1998266387
+      spriteID: 700fe7cca62407c4f9aab518d6b10d2e
+      internalID: 700826903
       vertices: []
       indices: 
       edges: []
@@ -160,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wizard_staff--Orange_0: -1998266387
+      image-removebg-preview 1_0: 700826903
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

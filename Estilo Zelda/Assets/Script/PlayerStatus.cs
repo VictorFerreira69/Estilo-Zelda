@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStatus : CharactesStatus
 {
+     private bool invulneravel = false;
 
     protected override void Teste()
     {
@@ -15,16 +16,16 @@ public class PlayerStatus : CharactesStatus
     }
 
    
-    void Start()
+     public void SetInvulneravel(bool estado)
     {
-
-
+        invulneravel = estado;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void TakeDamage(float damage)
     {
+       
+        if (invulneravel) return; 
 
+        base.TakeDamage(damage);
     }
-
 }

@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 1813447148}
   - component: {fileID: 409635768}
   - component: {fileID: 106047657}
-  - component: {fileID: 1351000527}
+  - component: {fileID: 25213782}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2a957a8806fb443aff1550591a6e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeMax: 1
+  lifeMax: 20
   speed: 3
 --- !u!114 &1813447148
 MonoBehaviour:
@@ -304,7 +304,7 @@ MonoBehaviour:
   throwPoint: {fileID: 408066664}
   bombaPrefab: {fileID: 3715852223587828771, guid: 6f79de2a5168ed049b8895b3119d3b9c, type: 3}
   throwForce: 5
---- !u!114 &1351000527
+--- !u!114 &25213782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -313,6 +313,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 768189846475585558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e1686a927eede24ebfbbe321c9e4827, type: 3}
+  m_Script: {fileID: 11500000, guid: b14212d03a5c3b3429a20fcf3eaaac7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -34,7 +34,7 @@ public abstract class CharactesStatus : MonoBehaviour,IDamageable
         
     }
 
-    public void TakeDamage(float damage)
+    public  virtual void TakeDamage(float damage)
     {
         life -= damage;
 
