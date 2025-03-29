@@ -9,6 +9,13 @@ public class PlayerCaj : MonoBehaviour
 
     void Start()
 {
+    StartCoroutine(Initialize());
+}
+
+IEnumerator Initialize()
+{
+    yield return new WaitForSeconds(0.1f); 
+
     inventario = FindObjectOfType<Inventario>();
     cajadoEscudo = FindObjectOfType<CajadoEscudo>();
 
