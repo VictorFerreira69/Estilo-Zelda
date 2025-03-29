@@ -25,33 +25,22 @@ public class PlayerMove : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        if (horizontal < 0 && transform.localScale.x > 0)
-        {
-            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-        }
-        else if (horizontal > 0 && transform.localScale.x < 0)
-        {
-            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-        }
+        if ((horizontal > 0 && transform.localScale.x > 0) || (horizontal < 0 && transform.localScale.x < 0))
+            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
 
-        bool isWalking = horizontal != 0 || vertical != 0;
-        animator.SetBool("isWalking", isWalking);
+        animator.SetBool("isWalking", horizontal != 0 || vertical != 0);
+        animator.SetFloat("MoveDirection", vertical > 0 ? 1 : (vertical < 0 ? -1 : 0));
 
         if (Input.GetButtonDown("Fire1"))
         {
-            animator.SetTrigger("Attack");
-            AttackStart();
+            animator.SetTrigger(vertical > 0 ? "AttackUp" : (vertical < 0 ? "AttackDown" : "Attack"));
         }
+        
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal, vertical) * status.Speed;
-    }
-
-    public void TakeHit()
-    {
-        animator.SetTrigger("Hit");
     }
 
     public void AttackStart()
@@ -73,11 +62,9 @@ public class PlayerMove : MonoBehaviour
 
     public void Die()
     {
-        animator.SetTrigger("Death");
         rb.velocity = Vector2.zero;
         SceneManager.LoadScene("GameOver");
-       
     }
+}
 
   
-}
