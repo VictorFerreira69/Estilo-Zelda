@@ -57,21 +57,21 @@ public class PlayerHeath : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-           AcionarGameOver();
+           Die();
         }
     }
 
-    private void  AcionarGameOver()
-    {
-        SceneManager.LoadScene("GameOver");
-    }
-
-    public void TakeDamage(int damage)
+   public void TakeDamage(int damage)
     {
         playerStatus.TakeDamage(damage);
         HealthUI();
 
         
        
+    }
+     private void  Die()
+    {
+    
+        SceneManager.LoadScene("GameOver");
     }
 }

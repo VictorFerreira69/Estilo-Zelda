@@ -40,15 +40,15 @@ public class Chest : MonoBehaviour
         Inventario inventory = FindObjectOfType<Inventario>();
         IItem itemScript = itemInChest.GetComponent<IItem>();
 
-        // Adiciona o item ao inventário
+       
         inventory.AddItem(itemScript);
 
-        // Desativa o item no baú após pegar
+       
         itemInChest.SetActive(false);
         itemInChest = null;
     }
 
-    // Atualiza o sprite do baú
+    
     spriteRenderer.sprite = openChestSprite;
 }
 }

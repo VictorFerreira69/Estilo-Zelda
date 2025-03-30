@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c64ccecdcfa8bef42b274a1be3a027db
+guid: a77209c50c23fef4187b69652b15cb68
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,91 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: image-removebg-preview 3_0
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 216
-        width: 125
-        height: 165
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec7375eb2572a4b4b923968ae625d8cf
-      internalID: -2058103059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: image-removebg-preview 3_2
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 204
-        width: 143
-        height: 177
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65404756bc9c7c7438933cc7b40e0c49
-      internalID: -235775967
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: image-removebg-preview 3_3
-      rect:
-        serializedVersion: 2
-        x: 453
-        y: 204
-        width: 123
-        height: 169
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84cb1b1f176bcff4abaeb05b493f49fa
-      internalID: -604968153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: image-removebg-preview 3_4
-      rect:
-        serializedVersion: 2
-        x: 155
-        y: 213
-        width: 137
-        height: 179
-      alignment: 9
-      pivot: {x: 1.4054519, y: 1.1459949}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6843f03d9604f074290658afeab959f8
-      internalID: -615785349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -198,13 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      image-removebg-preview 3_5: -1275637592
-      image-removebg-preview 3_2: -235775967
-      image-removebg-preview 3_3: -604968153
-      image-removebg-preview 3_4: -615785349
-      image-removebg-preview 3_1: -1603909784
-      image-removebg-preview 3_0: -2058103059
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

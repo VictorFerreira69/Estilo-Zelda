@@ -14,7 +14,7 @@ public abstract class CharactesStatus : MonoBehaviour,IDamageable
 
     void Awake()
     {
-        life = lifeMax; // A vida começa cheia
+        life = lifeMax; 
     }
 
     protected abstract void Teste();
@@ -26,10 +26,10 @@ public abstract class CharactesStatus : MonoBehaviour,IDamageable
 
     public virtual void TakeDamage(float damage)
     {
-        life -= damage; // Diminui a vida quando o jogador recebe dano
+        life -= damage; 
         if (life <= 0)
         {
-            Destroy(gameObject); // Destroi o objeto (o jogador morre)
+            Destroy(gameObject); 
         }
     }
 }

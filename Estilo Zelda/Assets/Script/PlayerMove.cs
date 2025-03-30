@@ -10,14 +10,14 @@ public class PlayerMove : MonoBehaviour
     float horizontal, vertical;
     PlayerStatus status;
     Animator animator;
-    SwordAttack swordAttack;
+   
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         status = GetComponent<PlayerStatus>();
         animator = GetComponent<Animator>();
-        swordAttack = GetComponent<SwordAttack>();
+      
     }
 
     void Update()
@@ -42,29 +42,7 @@ public class PlayerMove : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal, vertical) * status.Speed;
     }
-
-    public void AttackStart()
-    {
-        swordAttack.OnComeçoAttack();
-        StartCoroutine(AttackDuration());
-    }
-
-    private IEnumerator AttackDuration()
-    {
-        yield return new WaitForSeconds(0.5f);
-        AttackEnd();
-    }
-
-    public void AttackEnd()
-    {
-        swordAttack.OnFimDoAttack();
-    }
-
-    public void Die()
-    {
-        rb.velocity = Vector2.zero;
-        SceneManager.LoadScene("GameOver");
-    }
 }
+    
+    
 
-  
