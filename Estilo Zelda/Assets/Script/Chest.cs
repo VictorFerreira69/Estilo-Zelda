@@ -33,18 +33,24 @@ public class Chest : MonoBehaviour
         }
     }
 
-    public void OpenChest()
+   public void OpenChest()
+{
+    if (itemInChest != null)
     {
-        if (itemInChest != null)
-        {
-            Inventario inventory = FindObjectOfType<Inventario>();
-            IItem itemScript = itemInChest.GetComponent<IItem>();
-            inventory.AddItem(itemScript);
-            Destroy(itemInChest);
-            itemInChest = null;
-        }
-        spriteRenderer.sprite = openChestSprite;
+        Inventario inventory = FindObjectOfType<Inventario>();
+        IItem itemScript = itemInChest.GetComponent<IItem>();
+
+        // Adiciona o item ao inventário
+        inventory.AddItem(itemScript);
+
+        // Desativa o item no baú após pegar
+        itemInChest.SetActive(false);
+        itemInChest = null;
     }
+
+    // Atualiza o sprite do baú
+    spriteRenderer.sprite = openChestSprite;
+}
 }
 
 

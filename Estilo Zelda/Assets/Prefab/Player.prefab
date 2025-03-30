@@ -40,7 +40,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 457676377}
-  - component: {fileID: 457676376}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -63,32 +62,6 @@ Transform:
   m_Father: {fileID: 768189846475585560}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &457676376
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457676375}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.8322788, y: 1.1589723}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.6972272, y: 1.7443638}
-  m_EdgeRadius: 0
 --- !u!1 &768189846475585558
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,9 +249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde8644393cce3a479ab6f659c9e7b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwPoint: {fileID: 408066664}
-  bombaPrefab: {fileID: 3715852223587828771, guid: 6f79de2a5168ed049b8895b3119d3b9c, type: 3}
-  throwForce: 5
 --- !u!114 &25213782
 MonoBehaviour:
   m_ObjectHideFlags: 0

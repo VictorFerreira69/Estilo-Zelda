@@ -8,26 +8,23 @@ public class PlayerInteraction : MonoBehaviour
     private IItem nearbyItem;
     private Chest nearbyChest;
     private Inventario inventario;
-
-    [SerializeField] private Transform throwPoint;
-    [SerializeField] private GameObject bombaPrefab;
-    [SerializeField] private float throwForce = 10f;
+    private PlayerStatus playerStatus;
+    private PlayerHeath playerHeath;
 
     void Start()
     {
         inventario = FindObjectOfType<Inventario>();
+        playerStatus = FindObjectOfType<PlayerStatus>();
+        playerHeath = FindObjectOfType<PlayerHeath>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+      
+        IItem selectedItem = inventario.GetSelectedItem();
+        if (selectedItem != null && selectedItem is PocaoCura pocao && Input.GetKeyDown(KeyCode.F))
         {
-            IItem selectedItem = inventario.GetSelectedItem();
-            if (selectedItem != null && selectedItem is Bomba bomb)
-            {
-                inventario.RemoveItem(bomb);
-                ThrowBomb();
-            }
+            pocao.UsarPocao(playerStatus, playerHeath, inventario);
         }
 
         if (nearbyItem != null && Input.GetKeyDown(KeyCode.E))
@@ -41,16 +38,6 @@ public class PlayerInteraction : MonoBehaviour
         {
             nearbyChest.OpenChest();
             nearbyChest = null;
-        }
-    }
-
-    private void ThrowBomb()
-    {
-        GameObject bombInstance = Instantiate(bombaPrefab, throwPoint.position, throwPoint.rotation);
-        Rigidbody2D rb = bombInstance.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.AddForce(throwPoint.right * throwForce, ForceMode2D.Impulse);
         }
     }
 
@@ -103,5 +90,3 @@ public class PlayerInteraction : MonoBehaviour
         nearbyChest = null;
     }
 }
-
-
