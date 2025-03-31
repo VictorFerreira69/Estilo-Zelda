@@ -42,14 +42,16 @@ public class Chest : MonoBehaviour
 
        
         inventory.AddItem(itemScript);
-
+      
        
         itemInChest.SetActive(false);
         itemInChest = null;
+         
     }
 
     
     spriteRenderer.sprite = openChestSprite;
+        Destroy(gameObject);
 }
 }
 

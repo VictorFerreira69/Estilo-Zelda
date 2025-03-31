@@ -101,6 +101,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -108,10 +132,10 @@ TextureImporter:
       name: BowllingguychibiLeft-Idle_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 14
-        width: 37
-        height: 37
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +153,10 @@ TextureImporter:
       name: BowllingguychibiLeft-Idle_1
       rect:
         serializedVersion: 2
-        x: 84
-        y: 14
-        width: 34
-        height: 38
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +174,10 @@ TextureImporter:
       name: BowllingguychibiLeft-Idle_2
       rect:
         serializedVersion: 2
-        x: 148
-        y: 14
-        width: 35
-        height: 39
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +195,10 @@ TextureImporter:
       name: BowllingguychibiLeft-Idle_3
       rect:
         serializedVersion: 2
-        x: 212
-        y: 14
-        width: 36
-        height: 39
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +216,10 @@ TextureImporter:
       name: BowllingguychibiLeft-Idle_4
       rect:
         serializedVersion: 2
-        x: 276
-        y: 14
-        width: 34
-        height: 39
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +237,10 @@ TextureImporter:
       name: BowllingguychibiLeft-Idle_5
       rect:
         serializedVersion: 2
-        x: 340
-        y: 14
-        width: 37
-        height: 38
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +258,10 @@ TextureImporter:
       name: BowllingguychibiLeft-Idle_6
       rect:
         serializedVersion: 2
-        x: 404
-        y: 14
-        width: 36
-        height: 38
+        x: 384
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,10 +279,10 @@ TextureImporter:
       name: BowllingguychibiLeft-Idle_7
       rect:
         serializedVersion: 2
-        x: 468
-        y: 14
-        width: 35
-        height: 37
+        x: 448
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9400adb31f7f8144fa40c788befbb20c
+guid: 9d930124130e4594392e6d2da858de34
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +118,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: image-removebg-preview 4_0
+      name: 05ab4853-ff4a-4942-88ac-95e84e2ea7eb-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 20
-        width: 150
-        height: 150
+        x: 88
+        y: 38
+        width: 325
+        height: 408
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52acb6e6e98c36c4687000376525f2a9
-      internalID: 1900514983
+      spriteID: e941776e70dbcdc4a88072eb23651ff8
+      internalID: -1863272983
       vertices: []
       indices: 
       edges: []
@@ -160,7 +160,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      image-removebg-preview 4_0: 1900514983
+      05ab4853-ff4a-4942-88ac-95e84e2ea7eb-removebg-preview_0: -1863272983
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
