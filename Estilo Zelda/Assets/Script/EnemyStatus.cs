@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyStatus : CharactesStatus
 {
-    [SerializeField] float damage;
+    public float damage;
 
     protected override void Teste()
     {
@@ -23,7 +23,7 @@ public class EnemyStatus : CharactesStatus
     }
 
    
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent(out IDamageable player))
         {

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1480869672093648085}
   - component: {fileID: 1480869672093648084}
   - component: {fileID: 1480869672093648091}
-  - component: {fileID: 1480869672093648090}
+  - component: {fileID: -7320606165094267695}
+  - component: {fileID: 1765907796}
   m_Layer: 6
   m_Name: EnemyTeste
   m_TagString: Enemy
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 1900088405, guid: 7e80ea05d49af6546a9b9d33f30953bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,8 +125,8 @@ BoxCollider2D:
   m_Offset: {x: 0.0739336, y: 0.20821083}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2413793, y: 1.137931}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -134,7 +135,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3509312, y: 1.5080948}
   m_EdgeRadius: 0
---- !u!114 &1480869672093648090
+--- !u!114 &-7320606165094267695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,9 +144,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480869672093648089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddbf9c7f40a1c5c46b635002cde5b0c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 317e4d3d892535c42ad32d826f059b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lifeMax: 20
-  speed: 0
-  damage: 10
+  speed: 4
+  damage: 30
+  detectionRange: 4.57
+  attackRange: 2.76
+  moveSpeed: 4
+  animator: {fileID: 1765907796}
+--- !u!95 &1765907796
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480869672093648089}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9e8d28d19e0ed93428839e29116d1905, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

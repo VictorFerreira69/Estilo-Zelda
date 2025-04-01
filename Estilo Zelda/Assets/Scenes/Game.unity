@@ -281,7 +281,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5e2706edd5fe7346bfb477002d15bb5, type: 2}
+  - {fileID: 2100000, guid: 536c7d6ab9f0da34dad925e8c2653576, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90726,11 +90726,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1480869672093648086, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.122471
+      value: 20.56
       objectReference: {fileID: 0}
     - target: {fileID: 1480869672093648086, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.271873
+      value: -19.98
       objectReference: {fileID: 0}
     - target: {fileID: 1480869672093648086, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
       propertyPath: m_LocalPosition.z
@@ -90766,7 +90766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1480869672093648089, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
       propertyPath: m_Name
-      value: EnemyTeste
+      value: Slime
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
