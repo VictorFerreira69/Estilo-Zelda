@@ -15,19 +15,28 @@ public class PlayerBulmerangue : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire2"))
         {
-            IItem selectedItem = inventario.GetSelectedItem();
-            if (selectedItem is Bulmerangue bulmerangueItem && bulmerangueItem.GetGameObject() != null)
-            {
-                GameObject bumerangue = Instantiate(bulmerangueItem.GetGameObject(), transform.position, Quaternion.identity);
-                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                mousePos.z = 0;
-                bumerangue.GetComponent<Bulmerangue>().Throw((mousePos - transform.position).normalized);
-                inventario.RemoveItem(bulmerangueItem);
-            }
-            else
-            {
-                Debug.LogError("Bulmerangue Prefab e null ");
-            }
+            TryThrowBoomerang();
         }
     }
+
+    private void TryThrowBoomerang()
+    {
+        if (inventario.GetSelectedItem() is Bulmerangue bulmerangueItem && bulmerangueItem.GetGameObject() != null)
+        {
+            ThrowBoomerang(bulmerangueItem);
+        }
+    }
+
+    private void ThrowBoomerang(Bulmerangue bulmerangueItem)
+    {
+        GameObject bumerangue = Instantiate(bulmerangueItem.GetGameObject(), transform.position, Quaternion.identity);
+        bumerangue.SetActive(true);
+        
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
+        
+        bumerangue.GetComponent<Bulmerangue>().Throw((mousePos - transform.position).normalized);
+        inventario.RemoveItem(bulmerangueItem);
+    }
 }
+

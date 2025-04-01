@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5454938278621932139
 Transform:
   m_ObjectHideFlags: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  maxDistance: 5
+  maxDistance: 16
   icon: {fileID: 1900514983, guid: 9400adb31f7f8144fa40c788befbb20c, type: 3}
   prefab: {fileID: 5454938278621932141}
 --- !u!61 &5454938278621932150

@@ -44,8 +44,15 @@ public class Chest : MonoBehaviour
         inventory.AddItem(itemScript);
       
        
-        itemInChest.SetActive(false);
-        itemInChest = null;
+       if (itemInChest.TryGetComponent<Bulmerangue>(out Bulmerangue bulmerangue))
+       {
+         bulmerangue.gameObject.SetActive(false); 
+      }
+       else
+      {
+      Destroy(itemInChest); 
+      }
+      itemInChest = null;
          
     }
 

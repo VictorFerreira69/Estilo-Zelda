@@ -2,44 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crab : EnemyStatus
+public class Crab : CharactesStatus
 {
     [SerializeField] private float detectionRange;
     [SerializeField] private float attackRange;
     [SerializeField] private float moveSpeed;
-   [SerializeField] private Animator animator;
     private Transform player;
     private bool isAttacking = false;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    protected override void Teste()
+    {
+        throw new System.NotImplementedException();
     }
 
     void Update()
     {
-        if (player != null)
+        if (player == null) return;
+
+        float distance = Vector2.Distance(transform.position, player.position);
+        
+        if (distance <= attackRange && !isAttacking)
         {
-            float distance = Vector2.Distance(transform.position, player.position);
-            
-            if (distance <= attackRange && !isAttacking)
-            {
-                StartCoroutine(Attack());
-            }
-            else if (distance <= detectionRange && distance > attackRange)
-            {
-                MovePlayer();
-            }
-            else
-            {
-              animator.SetBool("isMoving", false);
-            }
+            StartCoroutine(Attack());
+        }
+        else if (distance <= detectionRange)
+        {
+            MoveTowardsPlayer();
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
         }
     }
 
-    private void MovePlayer()
+    private void MoveTowardsPlayer()
     {
         animator.SetBool("isMoving", true);
+
+        Vector3 direction = (player.position - transform.position).normalized;
+        spriteRenderer.flipX = direction.x > 0;
+
         transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
     }
 
@@ -47,43 +56,24 @@ public class Crab : EnemyStatus
     {
         isAttacking = true;
         animator.SetTrigger("attack");
-        yield return new WaitForSeconds(0.5f); 
+        
+        yield return new WaitForSeconds(0.5f);
+        
         if (Vector2.Distance(transform.position, player.position) <= attackRange)
         {
-            player.GetComponent<IDamageable>()?.TakeDamage(damage);
+            player.GetComponent<IDamageable>()?.TakeDamage(10);
         }
-        yield return new WaitForSeconds(1f); 
+        
+        yield return new WaitForSeconds(1f);
         isAttacking = false;
     }
-     public override void TakeDamage(float damage)
-    {
-        base.TakeDamage(damage); 
-        animator.SetTrigger("Hit"); 
-        
-       
-        if (Life <= 0)
-        {
-            StartCoroutine(Die());
-        }
-    }
 
-    private IEnumerator Die()
-    {
-        animator.SetTrigger("Die"); 
-        yield return new WaitForSeconds(4f); 
-        Destroy(gameObject); 
-    }
     private void OnDrawGizmos()
-{
-  
-    Gizmos.color = Color.yellow;
-    Gizmos.DrawWireSphere(transform.position, detectionRange);
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
 
-  
-    Gizmos.color = Color.red;
-    Gizmos.DrawWireSphere(transform.position, attackRange);
-}
-   
-
-   
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
 }

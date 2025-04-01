@@ -6,6 +6,7 @@ public abstract class CharactesStatus : MonoBehaviour,IDamageable
 {
     [SerializeField] float lifeMax;
     [SerializeField] float speed;
+    [SerializeField] protected Animator animator;
     float life;
 
     public float LifeMax { get => lifeMax; }
@@ -14,22 +15,30 @@ public abstract class CharactesStatus : MonoBehaviour,IDamageable
 
     void Awake()
     {
-        life = lifeMax; 
+        life = lifeMax;
     }
 
     protected abstract void Teste();
-    
+
     protected virtual void Teste2()
     {
-        // Implementação do Teste2
+    
     }
 
     public virtual void TakeDamage(float damage)
     {
-        life -= damage; 
+        life -= damage;
+        animator.SetTrigger("Hit");
         if (life <= 0)
         {
-            Destroy(gameObject); 
+            StartCoroutine(Die());
         }
+    }
+
+    protected virtual IEnumerator Die()
+    {
+        animator.SetTrigger("Die");
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 }

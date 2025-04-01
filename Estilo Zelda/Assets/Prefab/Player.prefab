@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeMax: 150
   speed: 4
+  animator: {fileID: 1813447146}
 --- !u!114 &1813447148
 MonoBehaviour:
   m_ObjectHideFlags: 0
