@@ -91313,6 +91313,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1895254010}
   - component: {fileID: 1895254009}
+  - component: {fileID: 1895254012}
+  - component: {fileID: 1895254011}
   m_Layer: 0
   m_Name: Rato
   m_TagString: Untagged
@@ -91387,6 +91389,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1895254011
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895254008}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc2e8b142f74df3479283c377f26f076, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1895254012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895254008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7963d89f2b8464a80b66291bfac6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeMax: 50
+  speed: 0
+  damage: 4.94
+  detectionRange: 2.17
+  attackRange: 1.88
+  moveSpeed: 5.49
+  animator: {fileID: 1895254011}
 --- !u!1001 &5454938279649581350
 PrefabInstance:
   m_ObjectHideFlags: 0
