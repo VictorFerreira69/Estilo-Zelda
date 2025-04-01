@@ -10,14 +10,14 @@ public class PlayerMove : MonoBehaviour
     float horizontal, vertical;
     PlayerStatus status;
     Animator animator;
-   
+    public float attackRange = 1f;
+    public LayerMask enemyLayer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         status = GetComponent<PlayerStatus>();
         animator = GetComponent<Animator>();
-      
     }
 
     void Update()
@@ -34,13 +34,26 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             animator.SetTrigger(vertical > 0 ? "AttackUp" : (vertical < 0 ? "AttackDown" : "Attack"));
+            StartCoroutine(Attack());
         }
-        
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal, vertical) * status.Speed;
+    }
+
+    IEnumerator Attack()
+    {
+        yield return new WaitForSeconds(0.1f); 
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            if (enemy.TryGetComponent(out IDamageable enemyStatus))
+            {
+                enemyStatus.TakeDamage(10f); 
+            }
+        }
     }
 }
     
