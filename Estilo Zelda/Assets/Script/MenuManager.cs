@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private string NomeDaFase;
     [SerializeField] private GameObject painelOpçao;
     [SerializeField] private GameObject painelMenuPrincipal;
-    [SerializeField] private GameObject painelCredito;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +37,7 @@ public class MenuManager : MonoBehaviour
         painelOpçao.SetActive(false);
         painelMenuPrincipal.SetActive(true);
     }
-    public void AbrirCredito()
-    {
-      painelCredito.SetActive(true);
-        painelOpçao.SetActive(false);
-        painelMenuPrincipal.SetActive(false);
-    }
+    
 
     public void Sair()
     {
