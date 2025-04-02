@@ -124,9 +124,15 @@ MonoBehaviour:
   lifeMax: 20
   speed: 4
   animator: {fileID: 1765907796}
-  detectionRange: 5.24
-  attackRange: 2.13
+  detectionRange: 3.75
+  attackRange: 2.52
   moveSpeed: 4
+  patrolSpeed: 3
+  patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!95 &1765907796
 Animator:
   serializedVersion: 5

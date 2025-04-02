@@ -99,12 +99,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7963d89f2b8464a80b66291bfac6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeMax: 50
-  speed: 0
+  lifeMax: 40
+  speed: 3
   animator: {fileID: 1311197898670762028}
-  detectionRange: 2.17
-  attackRange: 1.88
-  moveSpeed: 5.49
+  detectionRange: 3.75
+  attackRange: 2.4
+  moveSpeed: 3
+  patrolSpeed: 3
+  patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!95 &1311197898670762028
 Animator:
   serializedVersion: 5
