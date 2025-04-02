@@ -37,6 +37,8 @@ public class PlayerBulmerangue : MonoBehaviour
         
         bumerangue.GetComponent<Bulmerangue>().Throw((mousePos - transform.position).normalized);
         inventario.RemoveItem(bulmerangueItem);
+        
     }
+    
 }
 
