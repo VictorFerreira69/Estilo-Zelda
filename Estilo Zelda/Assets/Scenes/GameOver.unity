@@ -291,7 +291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.8, y: 148.7}
+  m_AnchoredPosition: {x: 23, y: 144.67}
   m_SizeDelta: {x: 478.18, y: 109.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &309967391
@@ -316,8 +316,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Voce Morreu!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 34a58136b33c833459fd247c1cc44767, type: 2}
+  m_sharedMaterial: {fileID: -4330571596821496712, guid: 34a58136b33c833459fd247c1cc44767, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -347,7 +347,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
