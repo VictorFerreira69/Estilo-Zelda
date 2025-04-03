@@ -10,10 +10,10 @@ public class Crab : CharactesStatus
     [SerializeField] private float patrolSpeed;
     [SerializeField] private Transform[] patrolPoints;
     
-    private Transform player;
-    private SpriteRenderer spriteRenderer;
-    private int currentPatrolIndex = 0;
-    private bool isAttacking = false;
+   Transform player;
+     SpriteRenderer spriteRenderer;
+   int currentPatrolIndex = 0;
+    bool isAttacking = false;
 
     void Start()
     {
@@ -82,23 +82,6 @@ public class Crab : CharactesStatus
         yield return new WaitForSeconds(1f);
         isAttacking = false;
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-
-        Gizmos.color = Color.blue;
-        for (int i = 0; i < patrolPoints.Length; i++)
-        {
-            Gizmos.DrawSphere(patrolPoints[i].position, 0.2f);
-            if (i < patrolPoints.Length - 1)
-            {
-                Gizmos.DrawLine(patrolPoints[i].position, patrolPoints[i + 1].position);
-            }
-        }
-    }
 }
+
+   

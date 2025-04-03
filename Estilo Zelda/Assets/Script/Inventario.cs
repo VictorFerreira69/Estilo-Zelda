@@ -4,17 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Inventario : MonoBehaviour
 {
-    public int totalSlots = 3;
-    public GameObject slotPrefab;
-    public Transform slotParent;
-    public Color selectedColor = Color.yellow;
-    public Color defaultColor = Color.white;
-    public Sprite cadeadoSprite;
+     [SerializeField]  int totalSlots = 3;
+    [SerializeField]  GameObject slotPrefab;
+     [SerializeField]  Transform slotParent;
+     [SerializeField]  Color selectedColor = Color.yellow;
+    [SerializeField]  Color defaultColor = Color.white;
+    [SerializeField]  Sprite cadeadoSprite;
 
-    private int selectedSlot = 0;
-    private List<GameObject> slots = new List<GameObject>();
-    private List<IItem> items = new List<IItem>();
-    private CajadoEscudo cajadoEscudo;
+    int selectedSlot = 0;
+    List<GameObject> slots = new List<GameObject>();
+     List<IItem> items = new List<IItem>();
+     CajadoEscudo cajadoEscudo;
+     
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class Inventario : MonoBehaviour
 
         if (cajadoEscudo != null && !ContainsItem(cajadoEscudo))
             AddItem(cajadoEscudo);
+        
     }
 
     void Update()

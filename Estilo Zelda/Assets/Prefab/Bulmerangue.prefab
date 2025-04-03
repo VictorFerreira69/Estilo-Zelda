@@ -100,9 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  maxDistance: 16
+  maxDistance: 14
   icon: {fileID: 1900514983, guid: 9400adb31f7f8144fa40c788befbb20c, type: 3}
   prefab: {fileID: 5454938278621932141}
+  damage: 10
 --- !u!61 &5454938278621932150
 BoxCollider2D:
   m_ObjectHideFlags: 0

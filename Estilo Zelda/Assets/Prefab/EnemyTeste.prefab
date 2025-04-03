@@ -108,7 +108,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &-7320606165094267695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,8 +124,9 @@ MonoBehaviour:
   lifeMax: 20
   speed: 4
   animator: {fileID: 1765907796}
-  detectionRange: 3.75
-  attackRange: 2.52
+  knockbackForce: 5
+  detectionRange: 3.87
+  attackRange: 2.7
   moveSpeed: 4
   patrolSpeed: 3
   patrolPoints:

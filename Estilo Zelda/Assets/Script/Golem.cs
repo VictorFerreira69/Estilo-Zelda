@@ -7,7 +7,9 @@ public class Golem : CharactesStatus
     [SerializeField] private float detectionRange;
     [SerializeField] private float attackCooldown;
     [SerializeField] private GameObject rockPrefab;
-    
+    [SerializeField] private GameObject door; 
+    [SerializeField] private Sprite openDoorSprite;
+
     private Transform player;
     private bool isAttacking = false;
 
@@ -43,9 +45,14 @@ public class Golem : CharactesStatus
         
         if (rock != null)
         {
-            yield return new WaitForSeconds(1f); 
-            DealDamage(rock);
-            Destroy(rock); 
+            Animator rockAnimator = rock.GetComponent<Animator>();
+            if (rockAnimator != null)
+            {
+                yield return new WaitForSeconds(rockAnimator.GetCurrentAnimatorStateInfo(0).length /2); 
+                DealDamage(rock);
+            }
+            yield return new WaitForSeconds(rockAnimator.GetCurrentAnimatorStateInfo(0).length / 2); 
+            Destroy(rock);
         }
         
         yield return new WaitForSeconds(attackCooldown);
@@ -62,16 +69,9 @@ public class Golem : CharactesStatus
         if (rockAnimator != null)
         {
             rockAnimator.SetTrigger("spawn");
-            StartCoroutine(DestroyAfterAnimation(rock, rockAnimator));
         }
         
         return rock;
-    }
-
-    private IEnumerator DestroyAfterAnimation(GameObject rock, Animator animator)
-    {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-        Destroy(rock);
     }
 
     private void DealDamage(GameObject rock)
@@ -81,13 +81,28 @@ public class Golem : CharactesStatus
         float distanceToPlayer = Vector2.Distance(rock.transform.position, player.position);
         if (distanceToPlayer < 1f)
         {
-            player.GetComponent<IDamageable>()?.TakeDamage(25);
+            player.GetComponent<IDamageable>()?.TakeDamage(35);
         }
     }
 
-    private void OnDrawGizmos()
+    protected override IEnumerator Die()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
+        animator.SetTrigger("Die");
+        yield return new WaitForSeconds(1f);
+        OpenDoor(); 
+        Destroy(gameObject);
+    }
+
+    private void OpenDoor()
+    {
+        if (door != null)
+        {
+            door.GetComponent<Collider2D>().enabled = false; 
+            SpriteRenderer spriteRenderer = door.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null && openDoorSprite != null)
+            {
+                spriteRenderer.sprite = openDoorSprite;
+            }
+        }
     }
 }

@@ -82,24 +82,8 @@ public class Rato : CharactesStatus
         yield return new WaitForSeconds(1f);
         isAttacking = false;
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-
-        Gizmos.color = Color.blue;
-        for (int i = 0; i < patrolPoints.Length; i++)
-        {
-            Gizmos.DrawSphere(patrolPoints[i].position, 0.2f);
-            if (i < patrolPoints.Length - 1)
-            {
-                Gizmos.DrawLine(patrolPoints[i].position, patrolPoints[i + 1].position);
-            }
-        }
-    }
 }
+
+    
+
 

@@ -5,17 +5,17 @@ using TMPro;
 public class CajadoEscudo : MonoBehaviour,IItem
 
 {
-    [SerializeField] private Sprite cajadoIcon;
-    [SerializeField] private Sprite cajadoIconCooldown; 
-    [SerializeField] private GameObject barreiraPrefab;
-    [SerializeField] private float duracaoEscudo = 4f;
-    [SerializeField] private float cooldown = 5f;
+    [SerializeField]  Sprite cajadoIcon;
+    [SerializeField]  Sprite cajadoIconCooldown; 
+    [SerializeField]  GameObject barreiraPrefab;
+    [SerializeField]  float duracaoEscudo = 4f;
+    [SerializeField]  float cooldown = 5f;
 
-    private bool emCooldown = false;
-    private GameObject barreiraAtiva;
-    private Inventario inventario;
+     bool emCooldown = false;
+     GameObject barreiraAtiva;
+     Inventario inventario;
 
-    private float cooldownTimer = 0f;
+     float cooldownTimer = 0f;
 
     void Start()
     {

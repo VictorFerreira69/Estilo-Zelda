@@ -13,10 +13,12 @@ public abstract class CharactesStatus : MonoBehaviour,IDamageable
     public float Speed { get => speed; }
     public float Life { get => life; set => life = value; }
 
-    void Awake()
+   void Awake()
     {
         life = lifeMax;
+       
     }
+
 
     protected abstract void Teste();
 

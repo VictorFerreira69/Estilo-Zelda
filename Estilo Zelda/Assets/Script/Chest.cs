@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    public Sprite openChestSprite;
-    public Sprite closedChestSprite;
-    public GameObject itemInChest;
+    [SerializeField] Sprite openChestSprite;
+ [SerializeField]  Sprite closedChestSprite;
+    [SerializeField] GameObject itemInChest;
     private SpriteRenderer spriteRenderer;
 
     private void Start()
