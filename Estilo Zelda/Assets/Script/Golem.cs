@@ -93,16 +93,22 @@ public class Golem : CharactesStatus
         Destroy(gameObject);
     }
 
-    private void OpenDoor()
+   private void OpenDoor()
+{
+    if (door != null)
     {
-        if (door != null)
+        door.GetComponent<Collider2D>().enabled = true; 
+        SpriteRenderer spriteRenderer = door.GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null && openDoorSprite != null)
         {
-            door.GetComponent<Collider2D>().enabled = false; 
-            SpriteRenderer spriteRenderer = door.GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null && openDoorSprite != null)
-            {
-                spriteRenderer.sprite = openDoorSprite;
-            }
+            spriteRenderer.sprite = openDoorSprite;
+        }
+
+        PortaFinal doorScript = door.GetComponent<PortaFinal>();
+        if (doorScript != null)
+        {
+            doorScript.Open(); 
         }
     }
+}
 }

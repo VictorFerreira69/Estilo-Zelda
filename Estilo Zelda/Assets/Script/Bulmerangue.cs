@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Bulmerangue : MonoBehaviour,IItem
 {
-    public float speed = 10f;
-    public float maxDistance = 5f;
-    public Sprite icon;
-    public GameObject prefab;
-    public int damage = 10;
+   [SerializeField]  float speed = 10f;
+    [SerializeField]  float maxDistance = 5f;
+     [SerializeField]  Sprite icon;
+     [SerializeField]  GameObject prefab;
+    [SerializeField]  int damage = 10;
 
     private Vector3 startPosition;
     private Vector3 direction;

@@ -10,14 +10,18 @@ public class PlayerMove : MonoBehaviour
     float horizontal, vertical;
     PlayerStatus status;
     Animator animator;
-    public float attackRange = 1f;
-    public LayerMask enemyLayer;
+    [SerializeField]  float attackRange = 1f;
+ [SerializeField]  LayerMask enemyLayer;
+
+    [SerializeField]  float attackCooldown = 2f; 
+     float lastAttackTime;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         status = GetComponent<PlayerStatus>();
         animator = GetComponent<Animator>();
+        lastAttackTime = -attackCooldown; 
     }
 
     void Update()
@@ -31,8 +35,10 @@ public class PlayerMove : MonoBehaviour
         animator.SetBool("isWalking", horizontal != 0 || vertical != 0);
         animator.SetFloat("MoveDirection", vertical > 0 ? 1 : (vertical < 0 ? -1 : 0));
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && Time.time >= lastAttackTime + attackCooldown)
         {
+            lastAttackTime = Time.time;
+
             animator.SetTrigger(vertical > 0 ? "AttackUp" : (vertical < 0 ? "AttackDown" : "Attack"));
             StartCoroutine(Attack());
         }
@@ -45,17 +51,14 @@ public class PlayerMove : MonoBehaviour
 
     IEnumerator Attack()
     {
-        yield return new WaitForSeconds(0.1f); 
+        yield return new WaitForSeconds(0.1f);
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
         foreach (Collider2D enemy in hitEnemies)
         {
             if (enemy.TryGetComponent(out IDamageable enemyStatus))
             {
-                enemyStatus.TakeDamage(10f); 
+                enemyStatus.TakeDamage(10f);
             }
         }
     }
 }
-    
-    
-

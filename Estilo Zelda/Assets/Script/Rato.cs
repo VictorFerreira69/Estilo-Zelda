@@ -76,7 +76,7 @@ public class Rato : CharactesStatus
         
         if (Vector2.Distance(transform.position, player.position) <= attackRange)
         {
-            player.GetComponent<IDamageable>()?.TakeDamage(10);
+            player.GetComponent<IDamageable>()?.TakeDamage(14);
         }
         
         yield return new WaitForSeconds(1f);

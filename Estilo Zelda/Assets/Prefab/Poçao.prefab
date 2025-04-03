@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 533c2ad9dca935e45871287b181381bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curaQuantidade: 10
+  curaQuantidade: 20
   usosTotais: 4
   "po\xE7aoIcon": {fileID: -604968153, guid: c64ccecdcfa8bef42b274a1be3a027db, type: 3}
   "spritesPo\xE7ao":

@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 221621741}
   - component: {fileID: 221621740}
   - component: {fileID: 221621743}
+  - component: {fileID: 221621744}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -297,6 +298,39 @@ MonoBehaviour:
   player: {fileID: 423776618}
   smoothing: 5
   offset: {x: 12.99, y: 0, z: 0}
+--- !u!114 &221621744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221621739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &223369528
 GameObject:
   m_ObjectHideFlags: 0
@@ -20012,8 +20046,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 666769573}
     m_Modifications:
     - target: {fileID: -7320606165094267695, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7320606165094267695, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
       propertyPath: lifeMax
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -7320606165094267695, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7320606165094267695, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
+      propertyPath: patrolSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -7320606165094267695, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -20813,6 +20859,8 @@ GameObject:
   - component: {fileID: 1304216339}
   - component: {fileID: 1304216338}
   - component: {fileID: 1304216340}
+  - component: {fileID: 1304216342}
+  - component: {fileID: 1304216341}
   m_Layer: 0
   m_Name: Porta 2
   m_TagString: Untagged
@@ -20897,10 +20945,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.54520893, y: -0.89301395}
+  m_Offset: {x: 0.54520893, y: 0.39525795}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -20911,8 +20959,41 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.255327, y: 2.293972}
+  m_Size: {x: 6.255327, y: 3.5007076}
   m_EdgeRadius: 0
+--- !u!50 &1304216341
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304216337}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1304216342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304216337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81a929ce84b4cb4db2fcae9e8138427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1369886890
 GameObject:
   m_ObjectHideFlags: 0
@@ -20979,11 +21060,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7510130987146803876, guid: 0ab15462fe1a9fe4a85102b0658effe9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.168453
+      value: -22.2
       objectReference: {fileID: 0}
     - target: {fileID: 7510130987146803876, guid: 0ab15462fe1a9fe4a85102b0658effe9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.794327
+      value: 20.86
       objectReference: {fileID: 0}
     - target: {fileID: 7510130987146803876, guid: 0ab15462fe1a9fe4a85102b0658effe9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21156,11 +21237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7510130987146803876, guid: 0ab15462fe1a9fe4a85102b0658effe9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.178453
+      value: -38.46
       objectReference: {fileID: 0}
     - target: {fileID: 7510130987146803876, guid: 0ab15462fe1a9fe4a85102b0658effe9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.034328
+      value: 42.58
       objectReference: {fileID: 0}
     - target: {fileID: 7510130987146803876, guid: 0ab15462fe1a9fe4a85102b0658effe9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21204,12 +21285,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 666769573}
     m_Modifications:
     - target: {fileID: 1311197898670762027, guid: 1ed8fce57e8af484ca85d8cfb041ce83, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311197898670762027, guid: 1ed8fce57e8af484ca85d8cfb041ce83, type: 3}
       propertyPath: lifeMax
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1311197898670762027, guid: 1ed8fce57e8af484ca85d8cfb041ce83, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311197898670762027, guid: 1ed8fce57e8af484ca85d8cfb041ce83, type: 3}
       propertyPath: attackRange
       value: 2.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311197898670762027, guid: 1ed8fce57e8af484ca85d8cfb041ce83, type: 3}
+      propertyPath: patrolSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1311197898670762027, guid: 1ed8fce57e8af484ca85d8cfb041ce83, type: 3}
       propertyPath: detectionRange
@@ -21694,8 +21787,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 666769573}
     m_Modifications:
     - target: {fileID: 1311197898670762027, guid: 1ed8fce57e8af484ca85d8cfb041ce83, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311197898670762027, guid: 1ed8fce57e8af484ca85d8cfb041ce83, type: 3}
       propertyPath: lifeMax
-      value: 50
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311197898670762027, guid: 1ed8fce57e8af484ca85d8cfb041ce83, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311197898670762027, guid: 1ed8fce57e8af484ca85d8cfb041ce83, type: 3}
+      propertyPath: patrolSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1311197898670762027, guid: 1ed8fce57e8af484ca85d8cfb041ce83, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -21831,14 +21936,6 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1304216337}
-    - target: {fileID: 6978236288084339107, guid: 229cc0b573a358e42aa1e4008d818e9e, type: 3}
-      propertyPath: lifeMax
-      value: 140
-      objectReference: {fileID: 0}
-    - target: {fileID: 6978236288084339107, guid: 229cc0b573a358e42aa1e4008d818e9e, type: 3}
-      propertyPath: attackCooldown
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6978236289777039455, guid: 229cc0b573a358e42aa1e4008d818e9e, type: 3}
       propertyPath: m_Name
       value: GolemMiniBoss

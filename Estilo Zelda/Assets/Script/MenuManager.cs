@@ -5,39 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private string NomeDaFase;
-    [SerializeField] private GameObject painelOpçao;
-    [SerializeField] private GameObject painelMenuPrincipal;
-    [SerializeField] private GameObject boss;
+    [SerializeField] string NomeDaFase;
+    [SerializeField]  GameObject painelOpcao;
+    [SerializeField]  GameObject painelMenuPrincipal;
+    [SerializeField]  GameObject boss;
+    [SerializeField]  GameObject ratoBaixo;
+    [SerializeField] GameObject ratoEsquerda;
+    [SerializeField] GameObject ratoDireita;
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void Jogar()
     {
         SceneManager.LoadScene(NomeDaFase);
         Time.timeScale = 1f;
 
     }
-    public void AbrirOpçao()
+    public void AbrirOpcao()
     {
-        painelOpçao.SetActive(true);
+        painelOpcao.SetActive(true);
         painelMenuPrincipal.SetActive(false);
         boss.SetActive(false);
+        ratoBaixo.SetActive(false);
+        ratoDireita.SetActive(false);
+        ratoEsquerda.SetActive(false);
     }
-    public void FecharOpçao()
+    public void FecharOpcao()
     {
-        painelOpçao.SetActive(false);
+        painelOpcao.SetActive(false);
         painelMenuPrincipal.SetActive(true);
         boss.SetActive(true);
+        ratoBaixo.SetActive(true);
+        ratoDireita.SetActive(true);
+        ratoEsquerda.SetActive(true);
     }
     
 
