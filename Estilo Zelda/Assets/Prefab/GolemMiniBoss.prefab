@@ -172,6 +172,6 @@ MonoBehaviour:
   animator: {fileID: 1125497210}
   detectionRange: 14.03
   attackCooldown: 1.5
-  rockPrefab: {fileID: 5466273245190526351, guid: e646d57e481c66e48b00bfbb5bf6e2c4, type: 3}
   door: {fileID: 0}
   openDoorSprite: {fileID: 1497531709, guid: 729ec2ee44586024f85139f5fe91ebc1, type: 3}
+  spikeSystem: {fileID: 0}

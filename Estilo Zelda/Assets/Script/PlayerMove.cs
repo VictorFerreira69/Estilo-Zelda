@@ -57,7 +57,7 @@ public class PlayerMove : MonoBehaviour
         {
             if (enemy.TryGetComponent(out IDamageable enemyStatus))
             {
-                enemyStatus.TakeDamage(10f);
+                enemyStatus.TakeDamage(15f);
             }
         }
     }

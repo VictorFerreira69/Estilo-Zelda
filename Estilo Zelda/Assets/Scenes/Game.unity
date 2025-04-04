@@ -20051,7 +20051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7320606165094267695, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
       propertyPath: lifeMax
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: -7320606165094267695, guid: 9d9cd592714653145afff5bad377ba16, type: 3}
       propertyPath: moveSpeed
@@ -21547,6 +21547,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1881909360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1881909362}
+  - component: {fileID: 1881909361}
+  m_Layer: 0
+  m_Name: GolemSpike
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1881909361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881909360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e57e8e55e618e246990e55848716b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rockPrefab: {fileID: 5466273245190526351, guid: e646d57e481c66e48b00bfbb5bf6e2c4, type: 3}
+  spikeDamage: 22
+--- !u!4 &1881909362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881909360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.774015, y: -20.834599, z: 1.5332437}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1898560335
 GameObject:
   m_ObjectHideFlags: 0
@@ -21936,6 +21982,10 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1304216337}
+    - target: {fileID: 6978236288084339107, guid: 229cc0b573a358e42aa1e4008d818e9e, type: 3}
+      propertyPath: spikeSystem
+      value: 
+      objectReference: {fileID: 1881909361}
     - target: {fileID: 6978236289777039455, guid: 229cc0b573a358e42aa1e4008d818e9e, type: 3}
       propertyPath: m_Name
       value: GolemMiniBoss
