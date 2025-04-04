@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField]  GameObject ratoBaixo;
     [SerializeField] GameObject ratoEsquerda;
     [SerializeField] GameObject ratoDireita;
+     [SerializeField] GameObject textoCriadores;
 
 
     public void Jogar()
@@ -28,6 +29,7 @@ public class MenuManager : MonoBehaviour
         ratoBaixo.SetActive(false);
         ratoDireita.SetActive(false);
         ratoEsquerda.SetActive(false);
+        textoCriadores.SetActive(false);
     }
     public void FecharOpcao()
     {
@@ -37,6 +39,7 @@ public class MenuManager : MonoBehaviour
         ratoBaixo.SetActive(true);
         ratoDireita.SetActive(true);
         ratoEsquerda.SetActive(true);
+        textoCriadores.SetActive(true);
     }
     
 
